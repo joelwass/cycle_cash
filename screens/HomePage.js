@@ -8,12 +8,16 @@ import {
   TouchableHighlight,
 } from 'react-native';
 const logo = require('../assets/images/CycleCash.jpg');
-import TrackYourMiles from './TrackYourMiles';
 
 export default class HomePage extends React.Component {
 
   constructor(props) {
     super(props);
+  }
+
+  trackYourMiles = () => {
+    console.log('track your miles');
+    this.props.navigator.push({ name:'TrackYourMiles' });
   }
 
   render() {
@@ -30,7 +34,8 @@ export default class HomePage extends React.Component {
           <Text style={styles.cycleCashTitle}>
             CycleCash
           </Text>
-          <TouchableHighlight style={styles.homePageButtons}>
+          <TouchableHighlight style={styles.homePageButtons}
+            onPress={this.trackYourMiles}>
             <Text style={styles.button}>
               Track Your Miles
             </Text>
@@ -52,7 +57,7 @@ export default class HomePage extends React.Component {
       </View>
     );
   }
-}
+};
 
 const styles = StyleSheet.create({
   container: {
