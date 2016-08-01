@@ -8,11 +8,12 @@ import {
   TouchableHighlight,
 } from 'react-native';
 const logo = require('../assets/images/CycleCash.jpg');
+import TrackYourMiles from './TrackYourMiles';
 
 export default class HomePage extends React.Component {
 
-  componentWillMount() {
-
+  constructor(props) {
+    super(props);
   }
 
   render() {
