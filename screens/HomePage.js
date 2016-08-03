@@ -20,6 +20,16 @@ export default class HomePage extends React.Component {
     this.props.navigator.push({ name:'TrackYourMiles' });
   }
 
+  pedalPoints = () => {
+    console.log('pedal points');
+    this.props.navigator.push({ name:'PedalPoints' });
+  }
+
+  spendPoints = () => {
+    console.log('spend points');
+    this.props.navigator.push({ name:'SpendPoints' });
+  }
+
   render() {
 
     return (
@@ -41,13 +51,15 @@ export default class HomePage extends React.Component {
             </Text>
           </TouchableHighlight>
 
-          <TouchableHighlight style={styles.homePageButtons}>
+          <TouchableHighlight style={styles.homePageButtons}
+            onPress={this.pedalPoints}>
             <Text style={styles.button}>
               Pedal Points
             </Text>
           </TouchableHighlight>
 
-          <TouchableHighlight style={styles.homePageButtons}>
+          <TouchableHighlight style={styles.homePageButtons}
+            onPress={this.spendPoints}>
             <Text style={styles.button}>
               Spend Points
             </Text>

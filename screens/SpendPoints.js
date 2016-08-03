@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 const hamburger = require('../assets/images/menu.png');
 
-export default class TrackYourMiles extends React.Component {
+export default class SpendPoints extends React.Component {
 
   constructor(props) {
     super(props);
@@ -38,27 +38,8 @@ export default class TrackYourMiles extends React.Component {
           </TouchableHighlight>
         </View>
 
-        <View>
-          <Text style={styles.distanceNumber}>54</Text>
-          <Text style={styles.distanceLabel}>Distance (miles)</Text>
-        </View>
         <View
-          style={styles.distanceBlock}>
-        </View>
-        <View
-          style={styles.durationAndSpeedBlock}>
-          <View
-            style={styles.durationBlock}>
-          </View>
-          <View
-            style={styles.speedBlock}>
-          </View>
-        </View>
-        <View
-          style={styles.stopStartBlock}>
-        </View>
-        <View
-          style={styles.adBlock}>
+          style={styles.availableStores}>
         </View>
       </View>
     )
@@ -90,32 +71,7 @@ const styles = StyleSheet.create({
     marginTop: 26,
     flexDirection: 'row',
   },
-  distanceBlock: {
-    flex: 2,
-  },
-  distanceNumber: {
-    fontSize: 64,
-    textAlign: 'center',
-    color: 'white',
-  },
-  distanceLabel: {
-    top: 10,
-    textAlign: 'center',
-    color: 'white',
-  },
-  durationAndSpeedBlock: {
-    flex: 1,
-  },
-  durationBlock: {
-
-  },
-  speedBlock: {
-
-  },
-  stopStartBlock: {
-    flex: 1,
-  },
-  adBlock: {
+  availableStores: {
 
   },
 });

@@ -9,6 +9,8 @@ import {
 } from 'react-native';
 import HomePage from './screens/HomePage';
 import TrackYourMiles from './screens/TrackYourMiles';
+import PedalPoints from './screens/PedalPoints';
+import SpendPoints from './screens/SpendPoints';
 
 class AppContainer extends React.Component {
 
@@ -19,8 +21,14 @@ class AppContainer extends React.Component {
     if (route.name == 'TrackYourMiles') {
       return <TrackYourMiles navigator={navigator} />
     }
+    if (route.name == 'PedalPoints') {
+      return <PedalPoints navigator={navigator} />
+    }
+    if (route.name == 'SpendPoints') {
+      return <SpendPoints navigator={navigator} />
+    }
   }
-  
+
   render() {
     return (
       <Navigator
